@@ -116,7 +116,7 @@ post '/create_payment_intent' do
       :payment_method_types => ['card'],
       :capture_method => 'automatic',
       :amount => params[:amount],
-      :currency => params[:currency] || 'usd',
+      :currency => params[:currency] || 'eur',
       :description => params[:description] || 'Example PaymentIntent',
     )
   rescue Stripe::StripeError => e
